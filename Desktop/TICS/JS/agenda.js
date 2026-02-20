@@ -4,13 +4,6 @@ let seguir = true;
 document.write(opcion);
 
 const personas = [];
-// const persona = {
-//     "nombre": ,
-//     "apellido": ,
-//     "Facultad": ,
-//     "Teléfono": ,
-//     "Edad":
-// };
 
 while (seguir) {
     let opcion = parseInt(prompt('Escoge una opción \n1: agregar \n2: listar \n3: salir'));
@@ -18,11 +11,25 @@ while (seguir) {
     case 1:
         alert('Escogiste la opción 1');
         let nombre = prompt('Ingresa tu nombre');
-        personas.push(nombre);
+        let apellido = prompt('Ingresa tu apellido');
+        let facultad = prompt('Ingresa tu facultad');
+        let telefono = parseInt(prompt('Ingresa tu telefono'));
+        let edad = parseInt(prompt('Ingresa tu edad'));
+
+        const persona = {
+            "Nombre": nombre,
+            "Apellido": apellido,
+            "Facultad": facultad,
+            "Teléfono": telefono,
+            "Edad": edad
+        };
+
+        personas.push(persona);
         console.table(personas);
         break;
     case 2:
         alert('Escogiste la opción 2');
+        console.table(personas);
         break;
     case 3:
         alert('Escogiste salir');
